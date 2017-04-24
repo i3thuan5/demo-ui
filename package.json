@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node devServer.js",
-    "build": "mkdir -p build;rm -f build/* && NODE_ENV=production webpack --config webpack.config.prod.js --bail",
+    "build": "mkdir -p build;rm -f build/* && NODE_ENV=production webpack --config webpack.config.prod.js --bail"
   },
   "repository": {
     "type": "git",
