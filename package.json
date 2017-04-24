@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "node devServer.js",
-    "compile": "babel src --out-dir lib"
+    "compile": "babel src --out-dir lib",
+    "build": "rm -f lib/*;mkdir -p lib && npm run compile",
+    "deploy": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
