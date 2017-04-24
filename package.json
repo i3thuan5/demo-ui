@@ -2,10 +2,10 @@
   "name": "demo-ui",
   "version": "1.0.0",
   "description": "demo網頁中常用的版面元素 Edit",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "node devServer.js",
-    "build": "mkdir -p build;rm -f build/* && NODE_ENV=production webpack --config webpack.config.prod.js --bail"
+    "build": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -25,10 +25,10 @@
   "dependencies": {
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "semantic-ui-css": "^2.2.10"
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.4.0",
     "babel-loader": "^6.2.1",
     "babel-polyfill": "^6.13.0",
