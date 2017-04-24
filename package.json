@@ -1,0 +1,24 @@
+{
+  "name": "demo-ui",
+  "version": "1.0.0",
+  "description": "demo網頁中常用的版面元素 Edit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i3thuan5/demo-ui.git"
+  },
+  "keywords": [
+    "react",
+    "component-library",
+    "frontend-components"
+  ],
+  "author": "i3thuan5",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/i3thuan5/demo-ui/issues"
+  },
+  "homepage": "https://github.com/i3thuan5/demo-ui#readme"
+}
