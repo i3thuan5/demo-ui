@@ -1,6 +1,6 @@
 {
   "name": "demo-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "demo網頁中常用的版面元素 Edit",
   "main": "lib/index.js",
   "scripts": {
