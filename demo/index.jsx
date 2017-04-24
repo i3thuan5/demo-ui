@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Layout } from '../lib';
-import '../demo-ui.css';
 
 console.log('khiau2');
 
