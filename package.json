@@ -30,9 +30,7 @@
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "semantic-ui-button": "^2.2.10",
-    "semantic-ui-container": "^2.2.10",
-    "semantic-ui-menu": "^2.2.10"
+    "semantic-ui-css": "^2.2.10"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
