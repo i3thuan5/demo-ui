@@ -5,11 +5,12 @@ import { Layout, Footer } from '../lib';
 const sites = [{
       title: '意傳文化科技',
       url: 'https://xn--v0qr21b.xn--kpry57d/',
-    }, ];
+    },];
 
 render(
   <Layout>
     <h1>Hello demo-ui</h1>
+    <button className='ui primary button'>button</button>
     <Footer sites={sites}/>
   </Layout>,
   document.getElementById('app')
