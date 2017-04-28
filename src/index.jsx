@@ -5,7 +5,7 @@ import 'semantic-ui-css/components/button.min.css';
 import 'semantic-ui-css/components/form.min.css';
 import '../asset/css/demo-ui.css';
 
-export {default as Layout} from './Layout';
-export {default as Footer} from './Footer';
-export {default as FooterItem} from './FooterItem';
-export {default as MainSection} from './MainSection';
+export {default as Layout} from './theme/Layout';
+export {default as Footer} from './theme/Footer';
+export {default as FooterItem} from './theme/FooterItem';
+export {default as MainSection} from './theme/MainSection';
