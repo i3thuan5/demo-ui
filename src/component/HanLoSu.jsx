@@ -13,7 +13,6 @@ class HanLoSu extends React.Component {
   }
 }
 
-
 HanLoSu.propTypes = {
   漢字詞: PropTypes.string.isRequired,
   臺羅閏號調: PropTypes.string.isRequired,
