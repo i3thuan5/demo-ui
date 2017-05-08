@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import { Layout } from '../lib';
+import { Layout } from '../../lib';
 
 describe('Layout', ()=> {
   it('renders .app.background', () => {

@@ -10,7 +10,7 @@
     "compile": "babel src --out-dir lib",
     "build": "npm run clear && npm run compile",
     "deploy": "npm run build && npm publish",
-    "test": "NODE_ENV=test mocha -w --compilers js:babel-register,css:css-dnt-compiler --recursive"
+    "test": "NODE_ENV=test mocha --compilers js:babel-register,css:css-dnt-compiler --recursive"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import { Footer, FooterItem } from '../lib';
+import { Footer, FooterItem } from '../../lib';
 
 describe('Footer', ()=> {
   it('renders .app.footer.inverted', () => {

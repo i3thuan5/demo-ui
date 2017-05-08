@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import { MainSection } from '../lib';
+import { MainSection } from '../../lib';
 
 describe('MainSection', ()=> {
   it('renders main block', () => {
