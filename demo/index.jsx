@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Layout, Footer, MainSection } from '../lib';
+import { Layout, Footer, MainSection, HanLoSu } from '../lib';
 
 const sites = [{
       title: '意傳文化科技',
@@ -9,7 +9,12 @@ const sites = [{
 
 render(
   <Layout>
-    <MainSection>sui2</MainSection>
+    
+    <MainSection>
+      <p>HelloWorld</p>
+      <p>臺羅詞<HanLoSu 臺羅閏號調="11" 漢字詞="22"/></p>
+    </MainSection>
+    
     <Footer sites={sites}/>
   </Layout>,
   document.getElementById('app')
