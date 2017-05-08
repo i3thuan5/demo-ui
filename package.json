@@ -1,16 +1,17 @@
 {
   "name": "demo-ui",
-  "version": "1.1.0",
-  "description": "demo網頁中常用的版面元素 Edit",
+  "version": "1.2.0",
+  "description": "demo網頁中常用的版面元素",
   "main": "lib/index.js",
   "scripts": {
-    "start": "node devServer.js",
-    "clear": "rm -f lib/*;mkdir -p lib",
-    "dev": "babel src --out-dir lib -w",
-    "compile": "babel src --out-dir lib",
-    "build": "npm run clear && npm run compile",
+    "start": "npm run dev && node devServer.js",
+    "compile": "NODE_ENV=development babel src --out-dir lib",
+    "compile_prod": "NODE_ENV=production babel src --out-dir lib",
+    "clear": "rm -rf lib;mkdir -p lib",
+    "dev": "npm run clear && npm run compile",
+    "build": "npm run clear && npm run compile_prod",
     "deploy": "npm run build && npm publish",
-    "test": "NODE_ENV=test mocha -w --compilers js:babel-register,css:css-dnt-compiler --recursive"
+    "test": "npm run build && NODE_ENV=test mocha --compilers js:babel-register,css:css-dnt-compiler --recursive"
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
     "mocha": "^3.3.0",
     "react-addons-test-utils": "^15.5.1",
     "react-hot-loader": "^1.3.0",
+    "react-test-renderer": "^15.5.4",
     "strict-loader": "^1.1.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",

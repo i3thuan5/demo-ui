@@ -9,3 +9,5 @@ export {default as Layout} from './theme/Layout';
 export {default as Footer} from './theme/Footer';
 export {default as FooterItem} from './theme/FooterItem';
 export {default as MainSection} from './theme/MainSection';
+
+export {default as HanLoSu} from './component/HanLoSu';
