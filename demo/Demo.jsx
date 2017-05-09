@@ -12,8 +12,22 @@ class Demo extends React.Component {
     return (
       <Layout>
         <MainSection>
-          <p>HelloWorld</p>
-          <p>我很<HanLoSu 臺羅閏號調="sui2" 漢字詞="媠"/></p>
+
+          <h2>demo-ui</h2>
+
+          <section>
+            <h3>HanLoSu</h3>
+            <p>我很 <HanLoSu 臺羅閏號調="sui2" 漢字詞="媠"/></p>
+          </section>
+
+          <section>
+            <h3>icon-font</h3>
+            <ul>
+              <li><i className="icon-play"/> icon-play</li>
+              <li><i className="icon-docs"/> icon-docs</li>
+            </ul>
+          </section>
+
         </MainSection>
         <Footer sites={sites}/>
       </Layout>

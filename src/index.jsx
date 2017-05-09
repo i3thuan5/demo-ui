@@ -3,7 +3,7 @@ import 'semantic-ui-css/components/container.min.css';
 import 'semantic-ui-css/components/menu.min.css';
 import 'semantic-ui-css/components/button.min.css';
 import 'semantic-ui-css/components/form.min.css';
-import '../asset/css/demo-ui.css';
+import '../asset/icon-font/fontello.min.css';
 
 export {default as Layout} from './theme/Layout';
 export {default as Footer} from './theme/Footer';
