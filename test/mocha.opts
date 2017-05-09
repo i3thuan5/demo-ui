@@ -1,0 +1,4 @@
+-w 
+-r jsdom-global/register 
+--compilers js:babel-register,css:css-dnt-compiler 
+--recursive
