@@ -11,3 +11,5 @@ export {default as FooterItem} from './theme/FooterItem';
 export {default as MainSection} from './theme/MainSection';
 
 export {default as HanLoSu} from './component/HanLoSu';
+
+export {default as 意傳服務} from './api/意傳服務';
