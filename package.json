@@ -11,7 +11,8 @@
     "dev": "npm run clear && npm run compile",
     "build": "npm run clear && npm run compile_prod",
     "deploy": "npm run build && npm publish",
-    "test": "npm run build && NODE_ENV=test mocha"
+    "test": "npm run build && NODE_ENV=test mocha",
+    "test-fast": "NODE_ENV=test mocha"
   },
   "repository": {
     "type": "git",
