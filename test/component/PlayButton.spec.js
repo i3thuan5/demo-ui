@@ -12,10 +12,15 @@ const shallowSetup = (語句 = "逐家") => {
 };
 
 const mountSetup = (語句 = "逐家") => {
-  return mount(
+  const wrapper = mount(
     <PlayButton 語句={語句}/>,
     { attachTo: document.body.firstChild }
   );
+  let audio = wrapper.ref('合成音檔');
+  let onload = sinon.stub(audio.node, "load");
+  return { 
+    wrapper, audio, onload 
+  }
 };
 
 describe("Component", () => {
@@ -34,20 +39,14 @@ describe("Component", () => {
       expect(wrapper.find("button")).to.have.length(1);
     });
     it("reloads audio when update props", () => {
-      const wrapper = mountSetup();
-      let sui='0';
-      let audio = wrapper.ref('合成音檔');
-      audio.node.load = () => {sui='1'};
+      const { wrapper, audio, onload } = mountSetup('逐家');
       wrapper.setProps({ 語句: '語句' });
-      expect(sui).to.equal('1');
+      expect(onload.calledOnce).to.equal(true);
     });
     it("ignores same props", () => {
-      const wrapper = mountSetup();
-      let sui='0';
-      let audio = wrapper.ref('合成音檔');
-      audio.node.load = () => {sui='1'};
+      const { wrapper, audio, onload } = mountSetup('逐家');
       wrapper.setProps({ 語句: '逐家' });
-      expect(sui).to.equal('0');
+      expect(onload.called).to.equal(false);
     });
   });
 });
