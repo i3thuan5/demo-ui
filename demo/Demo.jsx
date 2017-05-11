@@ -6,7 +6,8 @@ import {
   MainSection, 
   HanLoSu,
   PlayButton, 
-  CopyButton
+  CopyButton,
+  ButtonStack
  } from '../lib';
 
 const sites = [{
@@ -47,6 +48,22 @@ class Demo extends React.Component {
           <section>
             <h3>CopyButton</h3>
             <p>按我複製<CopyButton 複製內容={"Hello copied!"}/></p>
+          </section>
+
+          <section>
+            <h3>ButtonStack</h3>
+            <ButtonStack>
+              <button className='ui button'>1</button>
+              <button className='ui button'>2</button>
+              <button className='ui button'>3</button>
+              <button className='ui button'>1</button>
+            </ButtonStack>
+            <h3>ButtonStack with CopyButton</h3>
+            <ButtonStack>
+              <CopyButton 複製內容={"1"} 按鈕名={"copy"}/>
+              <CopyButton 複製內容={"1"} 按鈕名={"copy"}/>
+              <CopyButton 複製內容={"1"} 按鈕名={"copy"}/>
+            </ButtonStack>
           </section>
 
         </MainSection>
