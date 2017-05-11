@@ -31,4 +31,8 @@ open http://localhost:3333/
 ## Component
 ```javascript
 <HanLoSu 臺羅閏號調="sui2" 漢字詞="媠"/>  //漢羅詞
+
+<PlayButton 語句={"逐-家｜tak8-ke1"}/>  //播放語音合成按鈕
+
+<CopyButton 複製內容={"Hello copied!"}/> //複製按鈕
 ```

@@ -18,7 +18,7 @@ class PlayButton extends React.Component {
 
   render() {
     const { 語句 } = this.props;
-    const src = API.語音合成({語句: "逐家"});
+    const src = API.語音合成({語句});
     return (
         <span>
           <audio ref="合成音檔">
