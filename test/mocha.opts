@@ -1,0 +1,3 @@
+-w 
+--compilers js:babel-register,css:css-dnt-compiler 
+--recursive
