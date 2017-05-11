@@ -12,5 +12,8 @@ export {default as MainSection} from './theme/MainSection';
 export {default as HanLoSu} from './component/HanLoSu';
 export {default as PlayButton} from './component/PlayButton';
 export {default as CopyButton} from './component/CopyButton';
+export {default as Block} from './component/Block';
+
+export {default as HanLoTsua} from './collection/HanLoTsua';
 
 export {default as 意傳服務} from './api/意傳服務';
