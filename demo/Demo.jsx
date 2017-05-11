@@ -24,7 +24,7 @@ class Demo extends React.Component {
 
           <section>
             <h3>HanLoSu</h3>
-            <p>我很 <HanLoSu 臺羅閏號調="sui2" 漢字詞="媠"/></p>
+            <p>我很 <HanLoSu 臺羅閏號調="sui2" 漢字="媠"/></p>
           </section>
 
           <section>
