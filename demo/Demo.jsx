@@ -4,9 +4,12 @@ import {
   Layout, 
   Footer, 
   MainSection, 
+  HanLoTsua,
   HanLoSu,
   PlayButton, 
-  CopyButton
+  CopyButton,
+  ButtonStack,
+  Block
  } from '../lib';
 
 const sites = [{
@@ -25,6 +28,12 @@ class Demo extends React.Component {
           <section>
             <h3>HanLoSu</h3>
             <p>我很 <HanLoSu 臺羅閏號調="sui2" 漢字="媠"/></p>
+          </section>
+
+          <section>
+            <h3>HanLoTsua</h3>
+            <p><HanLoTsua 臺羅閏號調="li1 sui2" 漢字="你 媠" 是否合音={false}/></p>
+            <p><HanLoTsua 臺羅閏號調="sui" 漢字="媠" 分詞="逐-家｜tak8-ke1"/></p>
           </section>
 
           <section>
@@ -47,6 +56,27 @@ class Demo extends React.Component {
           <section>
             <h3>CopyButton</h3>
             <p>按我複製<CopyButton 複製內容={"Hello copied!"}/></p>
+          </section>
+          
+          <section>
+            <h3>Block</h3>
+            <Block>Block</Block>
+          </section>
+
+          <section>
+            <h3>ButtonStack</h3>
+            <ButtonStack>
+              <button className='ui button'>1</button>
+              <button className='ui button'>2</button>
+              <button className='ui button'>3</button>
+              <button className='ui button'>1</button>
+            </ButtonStack>
+            <h3>ButtonStack with CopyButton</h3>
+            <ButtonStack>
+              <CopyButton 複製內容={"1"} 按鈕名={"copy"}/>
+              <CopyButton 複製內容={"1"} 按鈕名={"copy"}/>
+              <CopyButton 複製內容={"1"} 按鈕名={"copy"}/>
+            </ButtonStack>
           </section>
 
         </MainSection>

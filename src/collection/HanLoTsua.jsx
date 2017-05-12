@@ -7,7 +7,7 @@ class HanLoTsua extends React.Component {
   render() {
     const { 臺羅閏號調, 漢字, 分詞, 是否合音 } = this.props;
     let 合音 = (typeof 是否合音 !== 'undefined') ? 是否合音 : true;
-    const playbtn = 合音 ? <PlayButton 語句={分詞}/> : null;
+    const playbtn = 合音 ? <PlayButton 分詞={分詞}/> : null;
     const 漢字陣列 = 漢字.split(" ");
     const 臺羅陣列 = 臺羅閏號調.split(" ");
     const 詞陣列 = 漢字陣列.map((字, k) => (

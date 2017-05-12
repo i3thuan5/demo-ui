@@ -6,7 +6,7 @@ import "../../asset/icon-font/fontello.min.css";
 class PlayButton extends React.Component {
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.語句 === this.props.語句) return;
+    if (nextProps.分詞 === this.props.分詞) return;
     const 音檔 = this.refs.合成音檔;
     音檔.load();
   }
@@ -17,8 +17,8 @@ class PlayButton extends React.Component {
   }
 
   render() {
-    const { 語句 } = this.props;
-    const src = API.語音合成({語句});
+    const { 分詞 } = this.props;
+    const src = API.語音合成({分詞});
     return (
         <span>
           <audio ref="合成音檔">
@@ -35,7 +35,7 @@ class PlayButton extends React.Component {
 
 
 PlayButton.propTypes = {
-  語句: PropTypes.string.isRequired,
+  分詞: PropTypes.string.isRequired,
 };
 
 export default PlayButton;

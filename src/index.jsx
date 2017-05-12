@@ -13,6 +13,7 @@ export {default as HanLoSu} from './component/HanLoSu';
 export {default as PlayButton} from './component/PlayButton';
 export {default as CopyButton} from './component/CopyButton';
 export {default as Block} from './component/Block';
+export {default as ButtonStack} from './component/ButtonStack';
 
 export {default as HanLoTsua} from './collection/HanLoTsua';
 
