@@ -4,10 +4,12 @@ import {
   Layout, 
   Footer, 
   MainSection, 
+  HanLoTsua,
   HanLoSu,
   PlayButton, 
   CopyButton,
-  ButtonStack
+  ButtonStack,
+  Block
  } from '../lib';
 
 const sites = [{
@@ -26,6 +28,12 @@ class Demo extends React.Component {
           <section>
             <h3>HanLoSu</h3>
             <p>我很 <HanLoSu 臺羅閏號調="sui2" 漢字="媠"/></p>
+          </section>
+
+          <section>
+            <h3>HanLoTsua</h3>
+            <p><HanLoTsua 臺羅閏號調="li1 sui2" 漢字="你 媠" 是否合音={false}/></p>
+            <p><HanLoTsua 臺羅閏號調="sui" 漢字="媠" 語句="逐-家｜tak8-ke1"/></p>
           </section>
 
           <section>
@@ -48,6 +56,11 @@ class Demo extends React.Component {
           <section>
             <h3>CopyButton</h3>
             <p>按我複製<CopyButton 複製內容={"Hello copied!"}/></p>
+          </section>
+          
+          <section>
+            <h3>Block</h3>
+            <Block>Block</Block>
           </section>
 
           <section>
