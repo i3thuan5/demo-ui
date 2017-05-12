@@ -33,7 +33,7 @@ class Demo extends React.Component {
           <section>
             <h3>HanLoTsua</h3>
             <p><HanLoTsua 臺羅閏號調="li1 sui2" 漢字="你 媠" 是否合音={false}/></p>
-            <p><HanLoTsua 臺羅閏號調="sui" 漢字="媠" 語句="逐-家｜tak8-ke1"/></p>
+            <p><HanLoTsua 臺羅閏號調="sui" 漢字="媠" 分詞="逐-家｜tak8-ke1"/></p>
           </section>
 
           <section>
