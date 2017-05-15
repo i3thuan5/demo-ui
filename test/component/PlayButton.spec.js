@@ -5,15 +5,20 @@ import { shallow, mount } from "enzyme";
 import sinon from 'sinon';
 import { PlayButton } from "../../lib";
 
-const shallowSetup = (腔口="閩南語", 分詞 = "逐-家｜tak8-ke1") => {
+const initArgv = {
+  腔口: "閩南語", 
+  分詞: "逐-家｜tak8-ke1"
+};
+
+const shallowSetup = (argv = initArgv) => {
   return shallow(
-    <PlayButton 腔口={腔口} 分詞={分詞}/>
+    <PlayButton {...argv}/>
   );
 };
 
-const mountSetup = (腔口="閩南語", 分詞 = "逐-家｜tak8-ke1") => {
+const mountSetup = (argv = initArgv) => {
   const wrapper = mount(
-    <PlayButton 腔口={腔口} 分詞={分詞}/>,
+    <PlayButton {...argv}/>,
     { attachTo: document.body.firstChild }
   );
   const audio = wrapper.ref('合成音檔');
@@ -40,6 +45,16 @@ describe("Component", () => {
     it("renders button", () => {
       const wrapper = shallowSetup();
       expect(wrapper.find("button")).to.have.length(1);
+    });
+    it("passes 腔口 分詞 to source", () => {
+      const wrapper = shallowSetup({
+        腔口: "四縣腔",
+        分詞: "逐-家｜Tak8-ke1"
+      });
+      expect(wrapper.find("source").get(0).props.src)
+      .to.equal(encodeURI(
+        "https://服務.意傳.台灣/"+
+        "語音合成?查詢腔口=四縣腔&查詢語句=逐-家｜Tak8-ke1"));
     });
     it("reloads audio when update props", () => {
       const { wrapper, audio, onload } = mountSetup();
