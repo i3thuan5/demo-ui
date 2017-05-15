@@ -30,9 +30,25 @@ open http://localhost:3333/
 
 ## Component
 ```javascript
-<HanLoSu 臺羅閏號調="sui2" 漢字="媠"/>  //漢羅詞
+<HanLoSu 臺羅閏號調="ta̍k-ke" 漢字="逐家"/>  //漢羅詞
 
-<PlayButton 語句={"逐-家｜tak8-ke1"}/>  //播放語音合成按鈕
+<PlayButton 腔口="閩南語" 語句="逐-家｜tak8-ke1"/>  //播放語音合成按鈕
 
 <CopyButton 複製內容={"Hello copied!"}/> //複製按鈕
+
+<Block/> //一個區塊
+
+<ButtonStack/> //一組堆疊按鈕
+```
+
+## Collection
+```javascript
+<HanLoTsua 腔口="閩南語" 臺羅閏號調="ta̍k-ke" 漢字="逐家" 分詞="逐-家｜tak8-ke1" 
+是否合音={true}/>
+//漢羅逝，default 是否合音=true
+```
+
+## API
+```javascript
+意傳服務
 ```
