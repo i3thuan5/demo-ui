@@ -5,15 +5,15 @@ import { shallow, mount } from "enzyme";
 import sinon from 'sinon';
 import { PlayButton } from "../../lib";
 
-const shallowSetup = (分詞 = "逐-家｜tak8-ke1") => {
+const shallowSetup = (腔口="閩南語", 分詞 = "逐-家｜tak8-ke1") => {
   return shallow(
-    <PlayButton 分詞={分詞}/>
+    <PlayButton 腔口={腔口} 分詞={分詞}/>
   );
 };
 
-const mountSetup = (分詞 = "逐-家｜tak8-ke1") => {
+const mountSetup = (腔口="閩南語", 分詞 = "逐-家｜tak8-ke1") => {
   const wrapper = mount(
-    <PlayButton 分詞={分詞}/>,
+    <PlayButton 腔口={腔口} 分詞={分詞}/>,
     { attachTo: document.body.firstChild }
   );
   const audio = wrapper.ref('合成音檔');
@@ -28,7 +28,7 @@ const mountSetup = (分詞 = "逐-家｜tak8-ke1") => {
 
 describe("Component", () => {
   describe("PlayButton", () => {
-    
+
     beforeEach(function() {
       document.body.innerHTML = '<div></div>';
     });

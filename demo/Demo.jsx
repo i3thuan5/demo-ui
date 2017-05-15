@@ -32,8 +32,8 @@ class Demo extends React.Component {
 
           <section>
             <h3>HanLoTsua</h3>
-            <p><HanLoTsua 臺羅閏號調="li1 sui2" 漢字="你 媠" 是否合音={false}/></p>
-            <p><HanLoTsua 臺羅閏號調="sui" 漢字="媠" 分詞="逐-家｜tak8-ke1"/></p>
+            <HanLoTsua 臺羅閏號調="li1 sui2" 漢字="你 媠" 是否合音={false}/>
+            <HanLoTsua 臺羅閏號調="sui" 漢字="媠" 分詞="逐-家｜tak8-ke1"/>
           </section>
 
           <section>
@@ -46,7 +46,7 @@ class Demo extends React.Component {
 
           <section>
             <h3>PlayButton</h3>
-            <p>逐-家｜tak8-ke1<PlayButton 語句={"逐-家｜tak8-ke1"}/></p>
+            <p>逐-家｜tak8-ke1<PlayButton 腔口={"閩南語"} 分詞={"逐-家｜tak8-ke1"}/></p>
             <p>播放合成的句子。使用
               <a href='http://xn--v0qr21b.xn--kpry57d/'>意傳.台灣</a>
               的語音合成服務。只接收分詞後的語句，例：<br/>

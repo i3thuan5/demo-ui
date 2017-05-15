@@ -4,9 +4,10 @@ import { shallow } from "enzyme";
 import { Block, HanLoSu, PlayButton, HanLoTsua } from "../../lib";
 
 const initArgv = {
+  腔口: "閩南語",
   臺羅閏號調: "Ta̍k-ke",
   漢字: "逐家",
-  分詞: "",
+  分詞: "逐-家｜Tak8-ke1",
   是否合音: true
 };
 
@@ -49,22 +50,26 @@ describe("Component", () => {
         臺羅閏號調: "Ta̍k-ke tsò-hué",
         漢字: "逐家 做伙",
       });
-      expect(hanlosu.at(1).props()).to.eql({
+      expect([
+        hanlosu.at(0).props(),
+        hanlosu.at(1).props()
+      ]).to.eql([{
+        臺羅閏號調: "Ta̍k-ke",
+        漢字: "逐家",
+      },{
         臺羅閏號調: "tsò-hué",
         漢字: "做伙",
-      });
+      }]);
     });
     it("renders 1 PlayButton in a line", () => {
       const { playbtn } = setup();
       expect(playbtn).to.have.length(1);
     });
     it("passes props to PlayButton", () => {
-      const { playbtn } = setup({
-        ...initArgv,
-        分詞: "逐-家｜tak8-ke1",
-      });
+      const { playbtn } = setup();
       expect(playbtn.at(0).props()).to.eql({
-        分詞: "逐-家｜tak8-ke1"
+        腔口: "閩南語",
+        分詞: "逐-家｜Tak8-ke1"
       });
     });
     it("render no PlayButton as option", () => {
