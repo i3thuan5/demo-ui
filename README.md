@@ -32,7 +32,7 @@ open http://localhost:3333/
 ```javascript
 <HanLoSu 臺羅閏號調="ta̍k-ke" 漢字="逐家"/>  //漢羅詞
 
-<PlayButton 腔口="閩南語" 語句="逐-家｜tak8-ke1"/>  //播放語音合成按鈕
+<PlayButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1"/>  //播放語音合成按鈕
 
 <CopyButton 複製內容={"Hello copied!"}/> //複製按鈕
 
