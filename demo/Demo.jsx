@@ -7,6 +7,7 @@ import {
   HanLoTsua,
   HanLoSu,
   PlayButton, 
+  DownloadButton,
   CopyButton,
   ButtonStack,
   Block
@@ -40,6 +41,12 @@ class Demo extends React.Component {
           </section>
 
           <section>
+            <h3>DownloadButton</h3>
+            <DownloadButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1"/>
+            <DownloadButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1" 標題="點我下載"/>
+          </section>
+          
+          <section>
             <h3>HanLoTsua</h3>
             <HanLoTsua 腔口="閩南語" 臺羅閏號調="ta̍k-ke" 漢字="逐家" 分詞="逐-家｜tak8-ke1"/>
             <HanLoTsua 腔口="閩南語" 臺羅閏號調="ta̍k-ke" 漢字="逐家" 是否合音={false}/>
@@ -50,7 +57,7 @@ class Demo extends React.Component {
             <h3>CopyButton</h3>
             <p><CopyButton 複製內容="Hello copied!"/>按我複製</p>
           </section>
- 
+
           <section>
             <h3>icon-font</h3>
             <ul>
