@@ -52,3 +52,9 @@ open http://localhost:3333/
 ```javascript
 意傳服務
 ```
+
+## Fonts
+參考自[萌典](https://github.com/audreyt/moedict-webkit)
+* 𢯭手𨑨迌：MOEDICT萌典
+* a̍：FiraSansOT
+* ABCDabcd123：basicLatin本專案自訂字型
