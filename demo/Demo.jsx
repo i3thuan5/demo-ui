@@ -27,15 +27,30 @@ class Demo extends React.Component {
 
           <section>
             <h3>HanLoSu</h3>
-            <p>我很 <HanLoSu 臺羅閏號調="sui2" 漢字="媠"/></p>
+            <p>字字字<HanLoSu 臺羅閏號調="ta̍k-ke" 漢字="逐家"/>字字字</p>
+          </section>
+
+          <section>
+            <h3>PlayButton</h3>
+            <p><PlayButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1"/></p>
+            <p>播放合成的句子。使用
+              <a href='http://xn--v0qr21b.xn--kpry57d/'>意傳.台灣</a>
+              的語音合成服務，只接收分詞後的語句。<br/>
+              例：逐-家｜tak8-ke1 來-𨑨-迌｜lai5-tshit4-tho5 ！</p>
           </section>
 
           <section>
             <h3>HanLoTsua</h3>
-            <p><HanLoTsua 臺羅閏號調="li1 sui2" 漢字="你 媠" 是否合音={false}/></p>
-            <p><HanLoTsua 臺羅閏號調="sui" 漢字="媠" 分詞="逐-家｜tak8-ke1"/></p>
+            <HanLoTsua 腔口="閩南語" 臺羅閏號調="ta̍k-ke" 漢字="逐家" 分詞="逐-家｜tak8-ke1"/>
+            <HanLoTsua 腔口="閩南語" 臺羅閏號調="ta̍k-ke" 漢字="逐家" 是否合音={false}/>
+            <p>組合了HanLoSu和PlayButton。</p>
           </section>
 
+          <section>
+            <h3>CopyButton</h3>
+            <p><CopyButton 複製內容="Hello copied!"/>按我複製</p>
+          </section>
+ 
           <section>
             <h3>icon-font</h3>
             <ul>
@@ -43,21 +58,7 @@ class Demo extends React.Component {
               <li><i className="icon-docs"/> icon-docs</li>
             </ul>
           </section>
-
-          <section>
-            <h3>PlayButton</h3>
-            <p>逐-家｜tak8-ke1<PlayButton 語句={"逐-家｜tak8-ke1"}/></p>
-            <p>播放合成的句子。使用
-              <a href='http://xn--v0qr21b.xn--kpry57d/'>意傳.台灣</a>
-              的語音合成服務。只接收分詞後的語句，例：<br/>
-              逐-家｜tak8-ke1 來-𨑨-迌｜lai5-tshit4-tho5 ！</p>
-          </section>
-
-          <section>
-            <h3>CopyButton</h3>
-            <p>按我複製<CopyButton 複製內容={"Hello copied!"}/></p>
-          </section>
-          
+         
           <section>
             <h3>Block</h3>
             <Block>Block</Block>
@@ -73,9 +74,9 @@ class Demo extends React.Component {
             </ButtonStack>
             <h3>ButtonStack with CopyButton</h3>
             <ButtonStack>
-              <CopyButton 複製內容={"1"} 按鈕名={"copy"}/>
-              <CopyButton 複製內容={"1"} 按鈕名={"copy"}/>
-              <CopyButton 複製內容={"1"} 按鈕名={"copy"}/>
+              <CopyButton 複製內容="1" 按鈕名="copy"/>
+              <CopyButton 複製內容="1" 按鈕名="copy"/>
+              <CopyButton 複製內容="1" 按鈕名="copy"/>
             </ButtonStack>
           </section>
 

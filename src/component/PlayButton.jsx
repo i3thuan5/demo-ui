@@ -17,8 +17,8 @@ class PlayButton extends React.Component {
   }
 
   render() {
-    const { 分詞 } = this.props;
-    const src = API.語音合成({分詞});
+    const { 分詞, 腔口 } = this.props;
+    const src = API.語音合成({分詞, 腔口});
     return (
         <span>
           <audio ref="合成音檔">
@@ -35,7 +35,16 @@ class PlayButton extends React.Component {
 
 
 PlayButton.propTypes = {
-  分詞: PropTypes.string.isRequired,
+  腔口: PropTypes.string.isRequired,
+  分詞: function(props, propName, componentName) {
+    if (!/｜/.test(props[propName])) {
+      return new Error(
+        'Invalid prop `' + propName + '` supplied to' +
+        ' `' + componentName + '`. Should follow 分詞 format.'+
+        ' Validation failed.'
+      );
+    }
+  }
 };
 
 export default PlayButton;

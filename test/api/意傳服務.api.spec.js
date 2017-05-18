@@ -11,10 +11,22 @@ describe("服務.意傳.台灣", () => {
     });
     it("returns 語音合成", () => {
       const url = API.語音合成({
-        語句: "逐家"
+        腔口: "閩南語",
+        分詞: "逐-家｜Tak8-ke1"
       });
       expect(url).to.equal(encodeURI(
-        initDomain + "語音合成?查詢腔口=閩南語&查詢語句=逐家"
+        initDomain + 
+        "語音合成?查詢腔口=閩南語&查詢語句=逐-家｜Tak8-ke1"
+      ));
+    });
+    it("returns 語音合成 四縣腔", () => {
+      const url = API.語音合成({
+        腔口: "四縣腔",
+        分詞: "逐-家｜Tak8-ke1"
+      });
+      expect(url).to.equal(encodeURI(
+        initDomain + 
+        "語音合成?查詢腔口=四縣腔&查詢語句=逐-家｜Tak8-ke1"
       ));
     });
   });
