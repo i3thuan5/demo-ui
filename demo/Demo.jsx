@@ -43,7 +43,7 @@ class Demo extends React.Component {
           <section>
             <h3>DownloadButton</h3>
             <DownloadButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1"/>
-            <DownloadButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1" 標題="點我下載"/>
+            <DownloadButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1">點我下載</DownloadButton>
           </section>
           
           <section>

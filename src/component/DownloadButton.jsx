@@ -6,13 +6,13 @@ import "../../asset/icon-font/fontello.min.css";
 class DownloadButton extends React.Component {
 
   render() {
-    const { 分詞, 腔口, 標題 } = this.props;
+    const { 分詞, 腔口, children } = this.props;
     const src = API.語音合成({分詞, 腔口});
     return (
         <a download href={src}
           className='ui compact icon massive button'>
           <i className='icon-download-alt'/>
-          {標題}
+          {children}
         </a>
     );
   }
@@ -30,7 +30,7 @@ DownloadButton.propTypes = {
       );
     }
   },
-  標題: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default DownloadButton;
