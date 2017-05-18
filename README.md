@@ -34,6 +34,8 @@ open http://localhost:3333/
 
 <PlayButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1"/>  //播放語音合成按鈕
 
+<DownloadButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1"/> //下載按鈕
+
 <CopyButton 複製內容={"Hello copied!"}/> //複製按鈕
 
 <Block/> //一個區塊
