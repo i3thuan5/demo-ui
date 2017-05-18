@@ -12,6 +12,7 @@ export {default as MainSection} from './theme/MainSection';
 export {default as HanLoSu} from './component/HanLoSu';
 export {default as PlayButton} from './component/PlayButton';
 export {default as CopyButton} from './component/CopyButton';
+export {default as DownloadButton} from './component/DownloadButton';
 export {default as Block} from './component/Block';
 export {default as ButtonStack} from './component/ButtonStack';
 

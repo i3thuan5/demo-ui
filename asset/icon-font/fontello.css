@@ -54,5 +54,6 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-play:before { content: '\e800'; } /* '' */
-.icon-docs:before { content: '\f0c5'; } /* '' */
+.icon-play:before { content: '\e800'; }
+.icon-download-alt:before { content: '\e801'; }
+.icon-docs:before { content: '\f0c5'; }

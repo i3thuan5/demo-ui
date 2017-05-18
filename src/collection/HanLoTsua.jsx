@@ -1,6 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { HanLoSu, PlayButton, Block } from "../";
+import API from "../api/意傳服務";
+import { 
+  HanLoSu, 
+  PlayButton, 
+  Block, 
+  DownloadButton
+} from "../";
 
 class HanLoTsua extends React.Component {
 
@@ -13,10 +19,10 @@ class HanLoTsua extends React.Component {
       腔口
     } = this.props;
     let 合音 = (typeof 是否合音 !== 'undefined') ? 是否合音 : true;
-    const playbtn = 合音 ? 
-      <PlayButton 腔口={腔口}
-      分詞={分詞}/> : 
-      null;
+    const playBtn = 合音 ? 
+      <PlayButton 腔口={腔口} 分詞={分詞}/> : null;
+    const downloadBtn = 合音 ? 
+      <DownloadButton 腔口={腔口} 分詞={分詞}/> : null;
     const 漢字陣列 = 漢字.split(" ");
     const 臺羅陣列 = 臺羅閏號調.split(" ");
     const 詞陣列 = 漢字陣列.map((字, k) => (
@@ -26,7 +32,8 @@ class HanLoTsua extends React.Component {
     ));
     return (
       <Block>
-        {playbtn}
+        {downloadBtn}
+        {playBtn}
         {詞陣列}
       </Block>
     );
