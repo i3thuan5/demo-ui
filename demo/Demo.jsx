@@ -80,6 +80,17 @@ class Demo extends React.Component {
             </ButtonStack>
           </section>
 
+          <hr/>
+
+          <section>
+            <h3>字體</h3>
+            <p>參考自<a href="https://github.com/audreyt/moedict-webkit">萌典</a></p>
+            <ul>
+            <li>𢯭手𨑨迌：MOEDICT萌典</li>
+            <li>a̍：FiraSansOT</li>
+            </ul>
+          </section>
+
         </MainSection>
         <Footer sites={sites}/>
       </Layout>
