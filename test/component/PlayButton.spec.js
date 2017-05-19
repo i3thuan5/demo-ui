@@ -26,7 +26,7 @@ const mountSetup = (argv = initArgv) => {
   const onplay = sinon.stub(audio.node, "play");
   const button = wrapper.find('button'); 
   return { 
-    wrapper, audio, onload, onplay,
+    wrapper, audio, onload, onplay, 
     button
   }
 };
@@ -57,7 +57,7 @@ describe("Component", () => {
         "語音合成?查詢腔口=四縣腔&查詢語句=逐-家｜Tak8-ke1"));
     });
     it("reloads audio when update props", () => {
-      const { wrapper, audio, onload } = mountSetup();
+      const { wrapper, onload } = mountSetup();
       wrapper.setProps({ 分詞: '媠｜sui2' });
       expect(onload.calledOnce).to.equal(true);
     });
@@ -71,6 +71,30 @@ describe("Component", () => {
       wrapper.setProps({ 分詞: '媠｜sui2' });
       button.simulate('click');
       expect(onplay.called).to.equal(true);
+    });
+    it("shows red button when audio error", () => {
+      const { wrapper, button } = mountSetup({
+        腔口: "海陸腔", 
+        分詞: "啼｜tai 嘎｜gaˊ 共-下｜kiung+-ha+ 來｜loi 𢯭-手｜tenˇ-shiuˊ ！"
+      });
+     wrapper.setState({isError:true}); 
+     expect(button.at(0).hasClass('negative')).to.equal(true);
+    });
+    it("shows darker button when playing", () => {
+      const { wrapper, button } = mountSetup({
+        腔口: "海陸腔", 
+        分詞: "啼｜tai 嘎｜gaˊ 共-下｜kiung+-ha+ 來｜loi 𢯭-手｜tenˇ-shiuˊ ！"
+      });
+     wrapper.setState({isPlaying:true}); 
+     expect(button.at(0).hasClass('grey')).to.equal(true);
+    });
+    it("shows normal button", () => {
+      const { wrapper, button } = mountSetup({
+        腔口: "海陸腔", 
+        分詞: "啼｜tai 嘎｜gaˊ 共-下｜kiung+-ha+ 來｜loi 𢯭-手｜tenˇ-shiuˊ ！"
+      });
+     expect(['negative', 'disabled', 'grey'].every(c => 
+      wrapper.hasClass(c))).to.equal(false);
     });
   });
 });
