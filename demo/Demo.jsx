@@ -34,6 +34,7 @@ class Demo extends React.Component {
           <section>
             <h3>PlayButton</h3>
             <p><PlayButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1"/></p>
+            <p><PlayButton 腔口="閩南語" 分詞="啼｜tai 嘎｜gaˊ 共-下｜kiung+-ha+ 來｜loi 𢯭-手｜tenˇ-shiuˊ ！"/></p>
             <p>播放合成的句子。使用
               <a href='http://xn--v0qr21b.xn--kpry57d/'>意傳.台灣</a>
               的語音合成服務，只接收分詞後的語句。<br/>
