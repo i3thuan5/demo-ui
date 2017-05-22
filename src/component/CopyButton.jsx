@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "../../asset/icon-font/fontello.min.css";
 
 class CopyButton extends React.Component {
 
