@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import API from "../api/意傳服務";
-import {分詞格式} from '../vendors/CustomPropTypes';
-import "../../asset/icon-font/fontello.min.css";
+import {分詞格式} from '../vendor/CustomProptype';
 
 class PlayButton extends React.Component {
   
