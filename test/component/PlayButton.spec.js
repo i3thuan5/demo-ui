@@ -21,7 +21,7 @@ const mountSetup = (argv = initArgv) => {
     <PlayButton {...argv}/>,
     { attachTo: document.body.firstChild }
   );
-  const audio = wrapper.ref('合成音檔');
+  const audio = wrapper.find('audio');
   const onload = sinon.stub(audio.node, "load");
   const onplay = sinon.stub(audio.node, "play");
   const button = wrapper.find('button'); 
