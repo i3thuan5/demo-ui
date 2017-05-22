@@ -83,7 +83,6 @@ body {
   font-size: 1.9rem;
 }
 
-
 @media only screen and (max-width: 767px) {
   .app.stackable.buttons{
     display: -webkit-box;
@@ -98,5 +97,14 @@ body {
     padding-top: 1em;
     padding-bottom: 1em;
     border-bottom: 1px solid rgba(34,36,38,.15);
+  }
+  .ui.grid.text.container{
+    width: 500px !important;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .ui.grid.text.container{
+    width: auto !important;
   }
 }
