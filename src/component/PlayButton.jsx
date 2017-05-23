@@ -14,7 +14,7 @@ class PlayButton extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.分詞 === this.props.分詞) return;
+    if (nextProps.src === this.props.src) return;
     const 音檔 = this.合成音檔;
     音檔.load();
     this.setState({isPlaying:false});
@@ -55,8 +55,7 @@ class PlayButton extends React.Component {
   }
 
   render() {
-    const { 分詞, 腔口 } = this.props;
-    const src = API.語音合成({分詞, 腔口});
+    const { src } = this.props;
     return (
         <span>
           <audio ref={(a) => { this.合成音檔 = a; }}
@@ -76,8 +75,7 @@ class PlayButton extends React.Component {
 
 
 PlayButton.propTypes = {
-  腔口: PropTypes.string.isRequired,
-  分詞: 分詞格式,
+  src: PropTypes.string.isRequired
 };
 
 export default PlayButton;
