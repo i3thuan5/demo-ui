@@ -1,13 +1,22 @@
 import React from "react";
 import { expect } from "chai";
 import { shallow } from "enzyme";
-import { Block, HanLoSu, PlayButton, HanLoTsua } from "../../lib";
+import { 
+  Block, 
+  HanLoSu, 
+  PlayButton, 
+  DownloadButton,
+  HanLoTsua,
+  意傳服務 as API
+} from "../../lib";
 
 const initArgv = {
-  腔口: "閩南語",
   臺羅閏號調: "Ta̍k-ke",
   漢字: "逐家",
-  分詞: "逐-家｜Tak8-ke1",
+  src: API.語音合成({
+    腔口: "閩南語",
+    分詞: "逐-家｜Tak8-ke1"
+  }),
   是否合音: true
 };
 
@@ -19,7 +28,8 @@ const setup = (argv = initArgv) => {
     component,
     block: component.find(Block),
     hanlosu: component.find(HanLoSu),
-    playbtn: component.find(PlayButton)
+    playbtn: component.find(PlayButton),
+    downbtn: component.find(DownloadButton),
   };
 };
 
@@ -68,8 +78,13 @@ describe("Component", () => {
     it("passes props to PlayButton", () => {
       const { playbtn } = setup();
       expect(playbtn.at(0).props()).to.eql({
-        腔口: "閩南語",
-        分詞: "逐-家｜Tak8-ke1"
+        src: initArgv.src
+      });
+    });
+    it("passes props to DownloadButton", () => {
+      const { downbtn } = setup();
+      expect(downbtn.at(0).props()).to.eql({
+        src: initArgv.src
       });
     });
     it("render no PlayButton as option", () => {
@@ -78,6 +93,13 @@ describe("Component", () => {
         是否合音: false
       });
       expect(playbtn).to.have.length(0);
+    });
+    it("render no DownloadButton as option", () => {
+      const { downbtn } = setup({
+        ...initArgv,
+        是否合音: false
+      });
+      expect(downbtn).to.have.length(0);
     });
   });
 });
