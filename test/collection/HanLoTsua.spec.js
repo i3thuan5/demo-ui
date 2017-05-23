@@ -1,6 +1,7 @@
+import 'jsdom-global/register';
 import React from "react";
 import { expect } from "chai";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import { 
   Block, 
   HanLoSu, 
@@ -33,8 +34,24 @@ const setup = (argv = initArgv) => {
   };
 };
 
+const mountSetup = (argv = initArgv) => {
+  const component = mount(
+    <HanLoTsua {...argv}/>,
+    );
+  return {
+    component,
+  };
+};
+
 describe("Component", () => {
   describe("HanLoTsua(漢羅一逝)", () => {
+    it("default props 是否合音", () => {
+      const { component } = mountSetup({
+        ...initArgv,
+        是否合音: undefined
+      });
+      expect(component.props().是否合音).to.equal(true);
+    });
     it("renders 1 HanLoSu in a line", () => {
       const { hanlosu } = setup();
       expect(hanlosu).to.have.length(1);

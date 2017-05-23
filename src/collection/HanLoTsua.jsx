@@ -47,7 +47,7 @@ HanLoTsua.propTypes = {
 
 HanLoTsua.defaultProps = {
   src: '',
-  是否合音: false,
+  是否合音: true,
 };
 
 export default HanLoTsua;
