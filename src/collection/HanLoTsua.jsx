@@ -17,10 +17,9 @@ class HanLoTsua extends React.Component {
       是否合音,
       src
     } = this.props;
-    let 合音 = (typeof 是否合音 !== 'undefined') ? 是否合音 : true;
-    const playBtn = 合音 ? 
+    const playBtn = 是否合音 ? 
       <PlayButton src={src}/> : null;
-    const downloadBtn = 合音 ? 
+    const downloadBtn = 是否合音 ? 
       <DownloadButton src={src}/> : null;
     const 漢字陣列 = 漢字.split(" ");
     const 臺羅陣列 = 臺羅閏號調.split(" ");
@@ -42,8 +41,13 @@ class HanLoTsua extends React.Component {
 HanLoTsua.propTypes = {
   臺羅閏號調: PropTypes.string.isRequired,
   漢字: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
-  是否合音: PropTypes.bool.isRequired
+  src: PropTypes.string,
+  是否合音: PropTypes.bool,
+};
+
+HanLoTsua.defaultProps = {
+  src: '',
+  是否合音: false,
 };
 
 export default HanLoTsua;
