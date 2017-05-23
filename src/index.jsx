@@ -18,4 +18,4 @@ export {default as ButtonStack} from './component/ButtonStack';
 
 export {default as HanLoTsua} from './collection/HanLoTsua';
 
-export {default as 意傳服務} from './api/意傳服務';
+export 意傳服務 from './api/意傳服務';

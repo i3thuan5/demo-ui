@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import API from "../api/意傳服務";
-import {分詞格式} from '../vendor/CustomProptype';
 
 class DownloadButton extends React.Component {
 
   render() {
-    const { 分詞, 腔口, children } = this.props;
-    const src = API.語音合成({分詞, 腔口});
+    const { src, children } = this.props;
     return (
         <a download href={src}
           className='ui compact icon massive button'>
@@ -20,8 +18,7 @@ class DownloadButton extends React.Component {
 
 
 DownloadButton.propTypes = {
-  腔口: PropTypes.string.isRequired,
-  分詞: 分詞格式,
+  src: PropTypes.string.isRequired,
   children: PropTypes.node,
 };
 

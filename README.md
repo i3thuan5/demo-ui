@@ -53,6 +53,9 @@ open http://localhost:3333/
 ## API
 ```javascript
 意傳服務
+  網域
+  語音合成
+  文本直接合成
 ```
 
 ## Fonts

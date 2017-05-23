@@ -10,7 +10,8 @@ import {
   DownloadButton,
   CopyButton,
   ButtonStack,
-  Block
+  Block,
+  意傳服務 as API
  } from '../lib';
 
 const sites = [{
@@ -20,6 +21,17 @@ const sites = [{
 
 class Demo extends React.Component {
   render() {
+    const src = API.語音合成({
+      腔口:"閩南語",
+      分詞:"逐-家｜tak8-ke1"
+    });
+    const errSrc = API.語音合成({
+      腔口:"閩南語",
+      分詞:"啼｜tai 嘎｜gaˊ 共-下｜kiung+-ha+ 來｜loi 𢯭-手｜tenˇ-shiuˊ ！"
+    });
+    const 臺羅 = "ta̍k-ke";
+    const 漢字 = "逐家";
+
     return (
       <Layout>
         <MainSection>
@@ -28,13 +40,13 @@ class Demo extends React.Component {
 
           <section>
             <h3>HanLoSu</h3>
-            <p>字字字<HanLoSu 臺羅閏號調="ta̍k-ke" 漢字="逐家"/>字字字</p>
+            <p>字字字<HanLoSu 臺羅閏號調={臺羅} 漢字={漢字}/>字字字</p>
           </section>
 
           <section>
             <h3>PlayButton</h3>
-            <p><PlayButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1"/></p>
-            <p><PlayButton 腔口="閩南語" 分詞="啼｜tai 嘎｜gaˊ 共-下｜kiung+-ha+ 來｜loi 𢯭-手｜tenˇ-shiuˊ ！"/></p>
+            <p><PlayButton src={src}/></p>
+            <p><PlayButton src={errSrc}/></p>
             <p>播放合成的句子。使用
               <a href='http://xn--v0qr21b.xn--kpry57d/'>意傳.台灣</a>
               的語音合成服務，只接收分詞後的語句。<br/>
@@ -43,14 +55,14 @@ class Demo extends React.Component {
 
           <section>
             <h3>DownloadButton</h3>
-            <DownloadButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1"/>
-            <DownloadButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1">點我下載</DownloadButton>
+            <DownloadButton src={src}/>
+            <DownloadButton src={errSrc}>點我下載</DownloadButton>
           </section>
           
           <section>
             <h3>HanLoTsua</h3>
-            <HanLoTsua 腔口="閩南語" 臺羅閏號調="ta̍k-ke" 漢字="逐家" 分詞="逐-家｜tak8-ke1"/>
-            <HanLoTsua 腔口="閩南語" 臺羅閏號調="ta̍k-ke" 漢字="逐家" 是否合音={false}/>
+            <HanLoTsua src={src} 臺羅閏號調={臺羅} 漢字={漢字}/>
+            <HanLoTsua 是否合音={false} 臺羅閏號調={臺羅} 漢字={漢字}/>
             <p>組合了HanLoSu和PlayButton。</p>
           </section>
 
