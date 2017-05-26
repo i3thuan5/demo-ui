@@ -45,8 +45,11 @@ class Demo extends React.Component {
 
           <section>
             <h3>PlayButton</h3>
-            <p><PlayButton src={src}/></p>
-            <p><PlayButton src={errSrc}/></p>
+            <p>
+              <PlayButton src={src}/>
+              <PlayButton src={src}>點我播放</PlayButton>
+              <PlayButton src={errSrc}/>
+            </p>
             <p>播放合成的句子。使用
               <a href='http://xn--v0qr21b.xn--kpry57d/'>意傳.台灣</a>
               的語音合成服務，只接收分詞後的語句。<br/>
