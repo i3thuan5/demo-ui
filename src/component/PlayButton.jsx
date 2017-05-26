@@ -55,7 +55,7 @@ class PlayButton extends React.Component {
   }
 
   render() {
-    const { src } = this.props;
+    const { src, children } = this.props;
     return (
         <span>
           <audio ref={(a) => { this.合成音檔 = a; }}
@@ -67,6 +67,7 @@ class PlayButton extends React.Component {
           <button onClick={this.play.bind(this)}
             className={this.btnStyle()}>
             <i className={this.iconStyle()}/>
+            {children}
           </button>
         </span>
     );
@@ -75,7 +76,8 @@ class PlayButton extends React.Component {
 
 
 PlayButton.propTypes = {
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
+  children: PropTypes.node
 };
 
 export default PlayButton;

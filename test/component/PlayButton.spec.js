@@ -55,10 +55,19 @@ describe("Component", () => {
       const wrapper = shallowSetup();
       expect(wrapper.find("button")).to.have.length(1);
     });
-    it("passes src to source", () => {
+    it("passes prop src to source", () => {
       const wrapper = shallowSetup();
       expect(wrapper.find("source").get(0).props.src)
       .to.equal(initArgv.src);
+    });
+    it("passes prop children to title", () => {
+      const title = 'Hello button';
+      const wrapper = shallowSetup({
+        ...initArgv,
+        children: title
+      });
+      expect(wrapper.find("button").first().text())
+      .to.equal(title);
     });
     it("reloads audio when update props", () => {
       const { wrapper, onload } = mountSetup();
