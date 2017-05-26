@@ -36,4 +36,13 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Demo-ui
+src/
+test/
+css-dnt-compiler.js
+demo/
+devServer.js
+webpack.config.dev.js
+.babelrc
+.jscsrc
 .project
