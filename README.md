@@ -30,7 +30,7 @@ open http://localhost:3333/
 
 ## Component
 ```javascript
-<HanLoSu 臺羅閏號調="ta̍k-ke" 漢字="逐家"/>  //漢羅詞
+<HanLoSu 羅馬字="ta̍k-ke" 漢字="逐家"/>  //漢羅詞
 
 <PlayButton 腔口="閩南語" 分詞="逐-家｜tak8-ke1"/>  //播放語音合成按鈕
 
@@ -45,7 +45,7 @@ open http://localhost:3333/
 
 ## Collection
 ```javascript
-<HanLoTsua 臺羅閏號調="ta̍k-ke" 漢字="逐家" src={音檔網址}
+<HanLoTsua 羅馬字="ta̍k-ke" 漢字="逐家" src={音檔網址}
 是否合音={true}/>
 //漢羅逝，default 是否合音=true
 ```

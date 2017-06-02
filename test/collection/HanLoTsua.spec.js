@@ -12,7 +12,7 @@ import {
 } from "../../lib";
 
 const initArgv = {
-  臺羅閏號調: "Ta̍k-ke",
+  羅馬字: "Ta̍k-ke",
   漢字: "逐家",
   src: API.語音合成({
     腔口: "閩南語",
@@ -59,7 +59,7 @@ describe("Component", () => {
     it("renders multiple HanLoSu in a line", () => {
       const { hanlosu } = setup({
         ...initArgv,
-        臺羅閏號調: "Ta̍k-ke tsò-hué lâi-tshit-thô ！",
+        羅馬字: "Ta̍k-ke tsò-hué lâi-tshit-thô ！",
         漢字: "逐家 做伙 來𨑨迌 ！",
       });
       expect(hanlosu).to.have.length(4);
@@ -67,24 +67,24 @@ describe("Component", () => {
     it("passes props to 1 HanLoSu", () => {
       const { hanlosu } = setup();
       expect(hanlosu.props()).to.eql({
-        臺羅閏號調: "Ta̍k-ke",
+        羅馬字: "Ta̍k-ke",
         漢字: "逐家",
       });
     });
     it("passes props to 2 HanLoSu", () => {
       const { hanlosu } = setup({
         ...initArgv,
-        臺羅閏號調: "Ta̍k-ke tsò-hué",
+        羅馬字: "Ta̍k-ke tsò-hué",
         漢字: "逐家 做伙",
       });
       expect([
         hanlosu.at(0).props(),
         hanlosu.at(1).props()
       ]).to.eql([{
-        臺羅閏號調: "Ta̍k-ke",
+        羅馬字: "Ta̍k-ke",
         漢字: "逐家",
       },{
-        臺羅閏號調: "tsò-hué",
+        羅馬字: "tsò-hué",
         漢字: "做伙",
       }]);
     });

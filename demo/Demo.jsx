@@ -40,7 +40,7 @@ class Demo extends React.Component {
 
           <section>
             <h3>HanLoSu</h3>
-            <p>字字字<HanLoSu 臺羅閏號調={臺羅} 漢字={漢字}/>字字字</p>
+            <p>字字字<HanLoSu 羅馬字={臺羅} 漢字={漢字}/>字字字</p>
           </section>
 
           <section>
@@ -64,8 +64,8 @@ class Demo extends React.Component {
           
           <section>
             <h3>HanLoTsua</h3>
-            <HanLoTsua src={src} 臺羅閏號調={臺羅} 漢字={漢字}/>
-            <HanLoTsua 是否合音={false} 臺羅閏號調={臺羅} 漢字={漢字}/>
+            <HanLoTsua src={src} 羅馬字={臺羅} 漢字={漢字}/>
+            <HanLoTsua 是否合音={false} 羅馬字={臺羅} 漢字={漢字}/>
             <p>組合了HanLoSu和PlayButton。</p>
           </section>
 
