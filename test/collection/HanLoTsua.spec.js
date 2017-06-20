@@ -88,6 +88,21 @@ describe("Component", () => {
         漢字: "做伙",
       }]);
     });
+    it("輕聲調 傷倚矣Siunn-uá--ah 是兩個漢羅詞", () => {
+      const { hanlosu } = setup({
+        ...initArgv,
+        羅馬字: "Siunn-uá--ah",
+        漢字: "傷倚 矣",
+      });
+      expect(hanlosu.at(0).props()).to.eql({
+        羅馬字: "Siunn-uá",
+        漢字: "傷倚",
+      })
+      expect(hanlosu.at(1).props()).to.eql({
+        羅馬字: "--ah",
+        漢字: "矣",
+      });
+    });
     it("renders 1 PlayButton in a line", () => {
       const { playbtn } = setup();
       expect(playbtn).to.have.length(1);
