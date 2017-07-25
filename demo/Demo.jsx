@@ -11,6 +11,7 @@ import {
   CopyButton,
   ButtonStack,
   Block,
+  TextBlock,
   意傳服務 as API
  } from '../lib';
 import './demo.css';
@@ -46,15 +47,15 @@ class Demo extends React.Component {
 
           <section>
             <h3>PlayButton</h3>
+            <p>播放合成的句子。使用
+              <a href='http://xn--v0qr21b.xn--kpry57d/'>意傳.台灣</a>
+              的語音合成服務，只接收分詞後的語句。<br/>
+              例：逐-家｜tak8-ke1 來-𨑨-迌｜lai5-tshit4-tho5 ！</p>
             <p>
               <PlayButton src={src}/>
               <PlayButton src={src}>點我播放</PlayButton>
               <PlayButton src={errSrc}/>
             </p>
-            <p>播放合成的句子。使用
-              <a href='http://xn--v0qr21b.xn--kpry57d/'>意傳.台灣</a>
-              的語音合成服務，只接收分詞後的語句。<br/>
-              例：逐-家｜tak8-ke1 來-𨑨-迌｜lai5-tshit4-tho5 ！</p>
           </section>
 
           <section>
@@ -65,9 +66,9 @@ class Demo extends React.Component {
           
           <section>
             <h3>HanLoTsua</h3>
-            <HanLoTsua src={src} 羅馬字={臺羅} 漢字={漢字}/>
-            <HanLoTsua 是否合音={false} 羅馬字={臺羅} 漢字={漢字}/>
             <p>組合了HanLoSu和PlayButton。</p>
+            <HanLoTsua 羅馬字={臺羅} 漢字={漢字} 是否合音={true} src={src}/>
+            <HanLoTsua 羅馬字={臺羅} 漢字={漢字} 是否合音={false}/>
           </section>
 
           <section>
@@ -86,6 +87,11 @@ class Demo extends React.Component {
           <section>
             <h3>Block</h3>
             <Block>Block</Block>
+          </section>
+
+          <section>
+            <h3>TextBlock</h3>
+            <TextBlock>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</TextBlock>
           </section>
 
           <section>
