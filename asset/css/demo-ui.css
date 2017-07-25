@@ -55,6 +55,12 @@ body {
   margin: 0.5rem 0;
 }
 
+.app.text.block
+{
+  word-break: break-all;
+}
+
+
 .app.footer {
   background: #1b1c1d;
 }

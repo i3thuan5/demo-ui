@@ -4,7 +4,7 @@ import API from "../api/意傳服務";
 import { 
   HanLoSu, 
   PlayButton, 
-  Block, 
+  TextBlock, 
   DownloadButton
 } from "../";
 
@@ -29,11 +29,11 @@ class HanLoTsua extends React.Component {
         羅馬字={臺羅陣列[k]} />
     ));
     return (
-      <Block>
+      <TextBlock>
         {downloadBtn}
         {playBtn}
         {詞陣列}
-      </Block>
+      </TextBlock>
     );
   }
 }

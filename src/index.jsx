@@ -14,6 +14,7 @@ export {default as PlayButton} from './component/PlayButton';
 export {default as CopyButton} from './component/CopyButton';
 export {default as DownloadButton} from './component/DownloadButton';
 export {default as Block} from './component/Block';
+export {default as TextBlock} from './component/TextBlock';
 export {default as ButtonStack} from './component/ButtonStack';
 
 export {default as HanLoTsua} from './collection/HanLoTsua';
