@@ -13,6 +13,7 @@ import {
   Block,
   意傳服務 as API
  } from '../lib';
+import './demo.css';
 
 const sites = [{
       title: '意傳文化科技',
@@ -102,8 +103,6 @@ class Demo extends React.Component {
               <CopyButton 複製內容="1" 按鈕名="copy"/>
             </ButtonStack>
           </section>
-
-          <hr/>
 
           <section>
             <h3>字體</h3>
