@@ -22,7 +22,7 @@ class HanLoTsua extends React.Component {
     const downloadBtn = 是否合音 ? 
       <DownloadButton src={src}/> : null;
     const 漢字陣列 = 漢字.split(" ");
-    const 臺羅陣列 = [].concat(羅馬字.replace(/--/g, " --").split(" "));
+    const 臺羅陣列 = 羅馬字.split(" ");
     const 詞陣列 = 漢字陣列.map((字, k) => (
         <HanLoSu key={k}
         漢字={字}
