@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.13.12"></a>
+## [1.13.12](https://github.com/i3thuan5/demo-ui/compare/v1.13.11...v1.13.12) (2018-01-08)
+
+
+### Bug Fixes
+
+* .travis.yml加上skip_cleanup ([68fca11](https://github.com/i3thuan5/demo-ui/commit/68fca11))
+
+
+
 <a name="1.13.11"></a>
 ## [1.13.11](https://github.com/i3thuan5/demo-ui/compare/v1.13.10...v1.13.11) (2018-01-08)
 
