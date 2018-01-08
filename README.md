@@ -40,6 +40,8 @@ open http://localhost:3333/
 
 <Block/> //一個區塊
 
+<TextBlock/> //一個文字區塊
+
 <ButtonStack/> //一組堆疊按鈕
 ```
 

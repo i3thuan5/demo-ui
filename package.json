@@ -1,6 +1,6 @@
 {
   "name": "demo-ui",
-  "version": "1.13.7",
+  "version": "1.13.8",
   "description": "demo網頁中常用的版面元素",
   "main": "lib/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "build": "npm run clear && npm run compile_prod",
     "deploy": "npm run build && npm publish",
     "test": "npm run build && NODE_ENV=test mocha",
-    "test-fast": "NODE_ENV=test mocha"
+    "test-watch": "NODE_ENV=test mocha -w"
   },
   "repository": {
     "type": "git",
