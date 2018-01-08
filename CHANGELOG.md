@@ -2,8 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<a name="1.13.10"></a>
-## [1.13.10](https://github.com/i3thuan5/demo-ui/compare/v1.13.9...v1.13.10) (2018-01-08)
+<a name="1.13.11"></a>
+## [1.13.11](https://github.com/i3thuan5/demo-ui/compare/v1.13.10...v1.13.11) (2018-01-08)
 
 
 
