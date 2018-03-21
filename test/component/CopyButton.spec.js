@@ -33,5 +33,12 @@ describe("Component", () => {
       button.simulate('click');
       expect(oncopy.called).to.equal(true);
     });
+    it("copys the same as original text", () => {
+      let 欲複製字串 = "A-hí--á láu --tio̍h,";
+      const { wrapper, button, oncopy } = mountSetup(欲複製字串);
+      button.simulate('click');
+      // expect(wrapper.find("textarea").innerText).to.equal(true);
+      console.log('document.body.childNodes=', document.body.childNodes)
+    });
   });
 });
