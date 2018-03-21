@@ -38,7 +38,8 @@ body {
 }
 
 .app.background,
-.app.main.block > .ui.container {
+.app.main.block > .ui.container input,
+.app.main.block > .ui.container textarea, {
   font-family: "basicLatin","MOEDICT","FiraSansOT", sans-serif;
 }
 .app.main.block {
