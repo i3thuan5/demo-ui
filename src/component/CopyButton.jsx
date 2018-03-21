@@ -6,7 +6,7 @@ class CopyButton extends React.Component {
   copy() {
     const { 複製內容 } = this.props;
     const textField = document.createElement("textarea");
-    textField.innerText = 複製內容.replace(/ --/g, "--");
+    textField.innerText = 複製內容;//.toString().replace(/ --/g, "--");
     document.body.appendChild(textField);
     textField.select();
     document.execCommand("copy");
