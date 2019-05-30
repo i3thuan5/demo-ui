@@ -73,7 +73,7 @@ class Demo extends React.Component {
 
           <section>
             <h3>CopyButton</h3>
-            <p><CopyButton 複製內容="Hello copied!"/>按我複製</p>
+            <p><CopyButton 複製內容={"Hello world~\ncopied!"}/>按我複製</p>
           </section>
 
           <section>
