@@ -14,15 +14,19 @@ class CopyButton extends React.PureComponent {
   }
 
   render() {
-    const { 按鈕名 } = this.props;
     return (
       <button onClick={this.copy.bind(this)}
-        className='ui icon button'>
-        <i className='icon-docs'></i>
-        {按鈕名}
+        className={this.props.css}>
+          <i className='icon-docs'/>
+        {this.props.按鈕名}
       </button>
     );
   }
+}
+
+CopyButton.defaultProps = {
+  css: 'ui icon button',
+  按鈕名: ''
 }
 
 CopyButton.propTypes = {
