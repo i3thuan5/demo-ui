@@ -1,4 +1,7 @@
 # demo-ui
+[![npm version](https://badge.fury.io/js/demo-ui.svg)](https://badge.fury.io/js/demo-ui)
+[![Build Status](https://travis-ci.org/i3thuan5/demo-ui.svg?branch=master)](https://travis-ci.org/i3thuan5/demo-ui)
+
 demo網頁中常用的版面元素
 
 ## Running
