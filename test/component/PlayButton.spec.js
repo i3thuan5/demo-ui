@@ -7,14 +7,14 @@ import { PlayButton } from "../../lib";
 
 const initArgv = {
   src: encodeURI(
-    "https://服務.意傳.台灣/"+
+    "https://hts.ithuan.tw/"+
     "語音合成?查詢腔口=閩南語&查詢語句=逐-家｜tak8-ke1"
   ),
 };
 
 const hakkaArgv = {
   src: encodeURI(
-    "https://服務.意傳.台灣/"+
+    "https://hts.ithuan.tw/"+
     "語音合成?查詢腔口=四縣腔&查詢語句=逐-家｜Tak8-ke1"
   ),
 }
@@ -88,7 +88,7 @@ describe("Component", () => {
     it("shows red button when audio error", () => {
       const { wrapper, button } = mountSetup({
         src: encodeURI(
-          "https://服務.意傳.台灣/"+
+          "https://hts.ithuan.tw/"+
           "語音合成?查詢腔口=海陸腔&"+
           "查詢語句=啼｜tai 嘎｜gaˊ 共-下｜kiung+-ha+ 來｜loi 𢯭-手｜tenˇ-shiuˊ ！"
         ),
@@ -99,7 +99,7 @@ describe("Component", () => {
     it("shows darker button when playing", () => {
       const { wrapper, button } = mountSetup({
         src: encodeURI(
-          "https://服務.意傳.台灣/"+
+          "https://hts.ithuan.tw/"+
           "語音合成?查詢腔口=海陸腔&"+
           "查詢語句=啼｜tai 嘎｜gaˊ 共-下｜kiung+-ha+ 來｜loi 𢯭-手｜tenˇ-shiuˊ ！"
         ),
@@ -110,7 +110,7 @@ describe("Component", () => {
     it("shows normal button", () => {
       const { wrapper, button } = mountSetup({
         src: encodeURI(
-          "https://服務.意傳.台灣/"+
+          "https://hts.ithuan.tw/"+
           "語音合成?查詢腔口=海陸腔&"+
           "查詢語句=啼｜tai 嘎｜gaˊ 共-下｜kiung+-ha+ 來｜loi 𢯭-手｜tenˇ-shiuˊ ！"
         ),

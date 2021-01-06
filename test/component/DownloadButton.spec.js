@@ -6,7 +6,7 @@ import { DownloadButton } from "../../lib";
 
 const initArgv = {
   src: encodeURI(
-    "https://服務.意傳.台灣/"+
+    "https://hts.ithuan.tw/"+
     "語音合成?查詢腔口=閩南語&查詢語句=逐-家｜tak8-ke1"
   ),
 };
