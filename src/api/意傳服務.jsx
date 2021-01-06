@@ -1,7 +1,7 @@
 const 意傳服務 = function(){};
 const self = 意傳服務;
 
-意傳服務.網域 = () => ("https://服務.意傳.台灣/");
+意傳服務.網域 = () => ("https://hts.ithuan.tw/");
 
 意傳服務.語音合成 = ({分詞='', 腔口=''} = {}) => (
   encodeURI(

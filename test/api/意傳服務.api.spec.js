@@ -1,9 +1,9 @@
 import {expect} from 'chai';
 import {意傳服務 as API} from '../../lib';
 
-const initDomain = "https://服務.意傳.台灣/";
+const initDomain = "https://hts.ithuan.tw/";
 
-describe("服務.意傳.台灣", () => {
+describe("hts.ithuan.tw", () => {
   describe("API", () => {
     it("domain", () => {
       const domain = API.網域();
